@@ -36,15 +36,6 @@ bool FileManager::init()
     cardSize = SD.cardSize() / (1024 * 1024);
     Serial.printf("SD Card Size: %lluMB\n", cardSize);
 
-    if (SD.mkdir("/pomiary"))
-    {
-        Serial.println("mkdir ok");
-    }
-    else
-    {
-        Serial.println("mkdir fail");
-    }
-
     return true;
 }
 

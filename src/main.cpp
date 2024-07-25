@@ -42,7 +42,12 @@ void setup()
 void loop()
 {
   static int licznik = 0;
-  temperatureLogger.logData(licznik);
+
+  if (!temperatureLogger.logData(licznik))
+  {
+    Serial.println("ok");
+  }
+
   delay(1000);
 
   licznik++;
